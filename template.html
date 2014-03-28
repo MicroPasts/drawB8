@@ -714,5 +714,5 @@ else {
     $("#oldbrowser").show();
 }
 
-$(window).scrollTop($('#imgContainer).offset());
+$('html, body').animate({scrollTop: $('#imgContainer).offset().top -100 }, 'slow');
 </script>
