@@ -442,7 +442,7 @@ function loadUserProgress() {
 
 // This function will load the marker of the city, and center the map on it
 function search(task, city, zoom) {
-    zoom = (typeof zoom === "undefined") ? 4 : zoom;
+    zoom = (typeof zoom === "undefined") ? 1 : zoom;
     city = city.replace(/\n/g,' ');
     console.log(city);
     if (city) {
@@ -497,7 +497,7 @@ function search(task, city, zoom) {
             $("#lon").text("-");
             $("#lat").text("-");
 
-            if (zoom !=4 ) {
+            if (zoom !=1 ) {
                 $("#searchingTip").show();
             }
 
