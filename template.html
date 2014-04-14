@@ -483,6 +483,7 @@ function search(task, city, zoom) {
                 );
             // Set the marker position
             point = new OpenLayers.Geometry.Point(lonLat.lon, lonLat.lat);
+            console.log(point);
             task.longitude = lonLat.lon;
             task.latitude = lonLat.lat;
             task.objectLayer.addFeatures([new OpenLayers.Feature.Vector(point)]);
