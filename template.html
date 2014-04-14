@@ -489,7 +489,7 @@ function search(task, city, zoom) {
             task.latitude = lonLat.lat;
             task.objectLayer.addFeatures([new OpenLayers.Feature.Vector(point)]);
             // Center the map
-            task.map.setCenter(lonLat, zoom);
+            task.map.setCenter(lonLat, 6);
             //lonLat.transform(
             //        map.getProjectionObject(), // from Spherical Mercator Projection
             //        new OpenLayers.Projection("EPSG:4326") // to transform from WGS 1984
