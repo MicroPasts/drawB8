@@ -451,7 +451,7 @@ function loadUserProgress() {
 
 // This function will load the marker of the city, and center the map on it
 function search(task, city, zoom) {
-    zoom = (typeof zoom === "undefined") ? 4 : zoom;
+    zoom = (typeof zoom === "undefined") ? 4 : 7;
     city = city.replace(/\n/g,' ');
     console.log(city);
     if (city) {
