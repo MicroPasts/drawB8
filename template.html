@@ -70,7 +70,7 @@
 
 <div class="btn-group pull-right">
 		<button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-eye-open"></i> Tutorial</button>
-		<a class="btn btn-info btn-sm" id="imgLink" href="http://community.micropasts.org/category/crowdsourcing-support"><i class="glyphicon glyphicon-book"></i> Community Help</a>
+		<a class="btn btn-info btn-sm tooltip" id="imgLink" href="http://community.micropasts.org/category/crowdsourcing-support"><i class="glyphicon glyphicon-book"></i> Community Help</a>
 </div>
 
 </div>
@@ -852,6 +852,7 @@ if ( $(window).width() < 768) {
 	s.removeClass("affix-top");
 }
 
+	$('.tooltip').tooltip();
     });
 });
 
