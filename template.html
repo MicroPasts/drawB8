@@ -734,7 +734,7 @@ pybossa.presentTask(function(task, deferred) {
         $('#task-id').html(task.id);
         $('<a id="raw" href=\"' + task.info.url_b + '\" class=\"btn btn-sm btn-info\" target=\"_blank\"><i class=\"glyphicon glyphicon-picture\"></i> Raw image</a>').insertAfter('#imgLink');
         $('<a href=\"../newtask\" class=\"btn btn-sm btn-info\" target=\"_blank\"><i class=\"glyphicon glyphicon-picture\"></i> Different card?</a>').insertAfter('#raw');
-        
+	$('#imgLink').tooltip();
         //$('#img_task_' + task.id).wheelzoom();
         //$('#img_task_' + task.id).trigger('wheelzoom.reset');
         $("#map_" + task.id).show();
@@ -851,8 +851,6 @@ if ( $(window).width() < 768) {
 	s.removeClass("affix");
 	s.removeClass("affix-top");
 }
-
-	$('#imgLink').tooltip();
     });
 });
 
