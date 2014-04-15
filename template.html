@@ -732,6 +732,7 @@ pybossa.presentTask(function(task, deferred) {
         
         $(".fancybox").fancybox();
         $('#imgLink').tooltip();
+        $("[rel=tooltip]").tooltip();
         $("#searchingTip").hide();
         $("#question").html(task.info.question);
         $('#task-id').html(task.id);
