@@ -623,16 +623,17 @@ pybossa.taskLoaded(function(task, deferred) {
         });
 
         // Layers
+         // Open Street Map (default layer)
+       
+        map.addLayer(new OpenLayers.Layer.OSM("Open Street Map"));
+
         //Google Maps Roadmap
         map.addLayer(new OpenLayers.Layer.Google(
             "Google Roadmap",
             {type: google.maps.MapTypeId.ROADMAP}
         ));
         
-        // Open Street Map (default layer)
        
-        map.addLayer(new OpenLayers.Layer.OSM("Open Street Map"));
-
         // Google Maps Satellite layer
         map.addLayer(new OpenLayers.Layer.Google(
             "Google Satellite",
