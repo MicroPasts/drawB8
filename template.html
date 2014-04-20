@@ -619,7 +619,14 @@ pybossa.taskLoaded(function(task, deferred) {
         });
 
         // Layers
+        //Google Maps Hybrid
+        map.addLayer(new OpenLayers.Layer.Google(
+            "Google Hybrid",
+            {type: google.maps.MapTypeId.HYBRID}
+        ));
+        
         // Open Street Map (default layer)
+       
         map.addLayer(new OpenLayers.Layer.OSM("Open Street Map"));
 
         // Google Maps Satellite layer
