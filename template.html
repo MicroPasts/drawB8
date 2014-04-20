@@ -540,9 +540,9 @@ pybossa.taskLoaded(function(task, deferred) {
         var copyright = "&copy; <a href='" + task.info.link + "'>British Museum</a>";
 
 	var extent = new OpenLayers.Bounds();
-        extent.extend(new OpenLayers.LonLat(39.869301,81.008797).transform(new OpenLayers.Projection("EPSG:4326"),
+        extent.extend(new OpenLayers.LonLat(66.51326,93.551331).transform(new OpenLayers.Projection("EPSG:4326"),
     new OpenLayers.Projection('EPSG:900913')));
-        extent.extend(new OpenLayers.LonLat(-31.266001,27.636311).transform(new OpenLayers.Projection("EPSG:4326"),
+        extent.extend(new OpenLayers.LonLat(-0.703107,-26.155701).transform(new OpenLayers.Projection("EPSG:4326"),
     new OpenLayers.Projection('EPSG:900913')));
 
 
@@ -712,7 +712,7 @@ pybossa.taskLoaded(function(task, deferred) {
         task.lon = 0;
         task.lat = 0;
 
-        search(task, "united kingdom");
+        search(task, "london");
         } // End if task empty
     else {
         deferred.resolve(task);
