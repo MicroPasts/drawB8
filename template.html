@@ -665,10 +665,8 @@ pybossa.taskLoaded(function(task, deferred) {
             $("#lat").text(feature.geometry.y);
             var tmp = feature.geometry.clone();
             tmp.transform(
-            	
-            	'EPSG:4326', 'EPSG:3857'
-                   // task.map.getProjectionObject(), // from Spherical Mercator Projection
-                    //new OpenLayers.Projection("EPSG:4326") // to transform from WGS 1984
+            	    task.map.getProjectionObject(), // from Spherical Mercator Projection
+                    new OpenLayers.Projection("EPSG:4326") // to transform from WGS 1984
             );
             $("#lon").text(tmp.x);
             $("#lat").text(tmp.y);
@@ -680,8 +678,9 @@ pybossa.taskLoaded(function(task, deferred) {
         // Default location to load the map
         var lonLat = new OpenLayers.LonLat(50.4020376,30.6147429233117)
             .transform(
-                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+                'EPSG:4326', 'EPSG:3857'
+                //new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                //new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
             );
 
         // Enable drag & drop in the urban park Layer
