@@ -613,6 +613,14 @@ pybossa.taskLoaded(function(task, deferred) {
         
 
         // Layers
+        
+               
+        // Google Maps Satellite layer
+        map.addLayer(new OpenLayers.Layer.Google(
+            "Google Satellite",
+            {type: google.maps.MapTypeId.SATELLITE}
+        ));
+        
          // Open Street Map (default layer)
        
         map.addLayer(new OpenLayers.Layer.OSM("Open Street Map"));
@@ -622,12 +630,7 @@ pybossa.taskLoaded(function(task, deferred) {
             {type: google.maps.MapTypeId.ROADMAP}
         ));
         
-       
-        // Google Maps Satellite layer
-        map.addLayer(new OpenLayers.Layer.Google(
-            "Google Satellite",
-            {type: google.maps.MapTypeId.SATELLITE}
-        ));
+
 
         // Google Maps Physical layer
         map.addLayer(new OpenLayers.Layer.Google(
