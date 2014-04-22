@@ -30,11 +30,7 @@
         height: 390px;
         width: 600px;
     }
-    @media (max-width: 768px) {
-    .affix {
-        position: static;
-    }
-    }
+
 </style>
 
 <div id="survey" class="modal fade" data-backdrop="static">
@@ -717,7 +713,7 @@ pybossa.taskLoaded(function(task, deferred) {
         task.lon = 0;
         task.lat = 0;
 
-        search(task, "london");
+        search(task, "Kiev");
         } // End if task empty
     else {
         deferred.resolve(task);
