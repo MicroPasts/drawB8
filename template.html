@@ -613,7 +613,10 @@ pybossa.taskLoaded(function(task, deferred) {
         
 
         // Layers
-        
+        map.addLayer(new OpenLayers.Layer.Google(
+            "Google Roadmap",
+            {type: google.maps.MapTypeId.ROADMAP}
+        ));        
                
         // Google Maps Satellite layer
         map.addLayer(new OpenLayers.Layer.Google(
@@ -625,10 +628,7 @@ pybossa.taskLoaded(function(task, deferred) {
        
         map.addLayer(new OpenLayers.Layer.OSM("Open Street Map"));
 	//Google Maps Roadmap
-        map.addLayer(new OpenLayers.Layer.Google(
-            "Google Roadmap",
-            {type: google.maps.MapTypeId.ROADMAP}
-        ));
+
         
 
 
