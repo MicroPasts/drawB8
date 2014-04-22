@@ -846,5 +846,8 @@ else {
     $("#oldbrowser").show();
 }
 
-
+$(window).resize(function() { 
+$('#map_canvas').css({height: newHeight + 'px', width: newWidth + 'px'}) 
+mapObj.updateSize(); 
+});
 </script>
