@@ -858,13 +858,6 @@ else {
     $(".skeleton").hide();
     $("#oldbrowser").show();
 }
-$(window).off('.affix');
-$("#imgHolder")
-    .removeClass("affix affix-top affix-bottom")
-    .removeData("bs.affix");
-window.onresize = function()
-{
-  setTimeout( function() { map.updateSize();}, 200);
-}
+
 
 </script>
