@@ -839,9 +839,14 @@ else {
     $(".skeleton").hide();
     $("#oldbrowser").show();
 }
-window.onresize = function()
-{
-  setTimeout( function() { map.updateSize();}, 200);
-}
+ $(window).resize(function () {
+      //$('#log').append('<div>Handler for .resize() called.</div>');
+         var canvasheight=$('#map').parent().css('height');
+         var canvaswidth=$('#map').parent().css('width');
+
+         $('#map').css("height", canvasheight);
+         $('#map').css("width", canvaswidth);
+
+   });
 
 </script>
