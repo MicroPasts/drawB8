@@ -459,7 +459,7 @@ function loadUserProgress() {
            $.cookie('survey', 'shown', { path: '/'});
         }
 
-    if ((data.done == 25) && if ((data.done == 1){
+    if ((data.done == 25) && ($.cookie('survey25') === undefined)){
            $("#survey25").modal('show');
            $.cookie('survey25', 'shown', { path: '/'});
         }
