@@ -466,7 +466,7 @@ Modernizr.load({
 });
 
 function loadUserProgress() {
-    pybossa.userProgress('drawB16').done(function(data){
+    pybossa.userProgress('drawB8').done(function(data){
             
         console.log("Total answers done for user: " + data.done);
 	if ((data.done == 1) && ($.cookie('surveyB8') === undefined)){
